@@ -1,0 +1,17 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h1>To Sell List</h1>
+<ul>
+  @foreach(var car in Model)
+  {
+    <h3>Model: @car.GetMakeModel()</h3>
+    <p>Price: $@car.GetPrice()</p>
+    <p>Odometer: @car.GetMiles()</p>
+  }
+</ul>
+<p><a href="/">Add another task</a></p>
+<form action="/cars_cleared" method="post">
+  <button type="sumbit" name="button">Clear All Data</button>
+</form>

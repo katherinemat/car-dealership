@@ -1,0 +1,10 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h1>You've added a new car!</h1>
+<h3>Model: @Model.GetMakeModel()</h3>
+<p>Price: $ @Model.GetPrice()</p>
+<p>Odometer: @Model.GetMiles()</p>
+<p><a href="/">Add another car</a></p>
+<p><a href="/view_all_cars">View current cars</a></p>
